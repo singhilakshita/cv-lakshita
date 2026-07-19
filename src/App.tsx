@@ -18,7 +18,8 @@ import { ResumeView } from "./ResumeView.tsx";
 import { ProjectDetail } from "./ProjectDetail.tsx";
 import { CommandPalette } from "./CommandPalette.tsx";
 import { ProcessPipeline } from "./ProcessPipeline.tsx";
-import { caseStudyPipeline, heroStages } from "./data/stages.ts";
+import { LaptopSlideshow } from "./LaptopSlideshow.tsx";
+import { caseStudyPipeline } from "./data/stages.ts";
 
 const SKILL_ICONS: Record<string, string> = {
   "Discovery & Research": "🔍",
@@ -137,8 +138,8 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="section-y relative mx-auto max-w-5xl px-6">
-      <div>
+    <section id="top" className="section-y relative mx-auto max-w-5xl px-6 lg:grid lg:grid-cols-[1fr_360px] lg:gap-10 lg:items-start">
+      <div className="lg:pt-8">
         <p className="rise-in mb-4 flex items-center gap-2 text-sm text-zinc-400">
           <MapPin size={14} className="text-accent" /> {profile.location} · {profile.title}
         </p>
@@ -168,7 +169,7 @@ function Hero() {
         </div>
         <p className="rise-in rise-in-3 mt-6 text-xs text-zinc-500">{profile.availability}</p>
       </div>
-      <ProcessPipeline stages={heroStages} />
+      <LaptopSlideshow />
     </section>
   );
 }

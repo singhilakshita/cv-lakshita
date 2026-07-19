@@ -603,3 +603,73 @@ html.resume-mode body {
     animation: none;
   }
 }
+
+/* Laptop slideshow */
+.laptop-frame {
+  perspective: 1200px;
+}
+.laptop-lid {
+  height: 8px;
+  background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 
+    inset 0 1px 0 rgba(255,255,255,0.05),
+    0 4px 20px -4px rgba(0,0,0,0.5);
+}
+.laptop-body {
+  background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 
+    0 20px 50px -12px rgba(0,0,0,0.6),
+    0 0 0 1px rgba(139,92,246,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+  transform: rotateX(-2deg);
+  transform-origin: top center;
+}
+.laptop-screen {
+  border-radius: 8px;
+}
+.screen-header {
+  border-radius: 8px 8px 0 0;
+}
+.screen-content {
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 transparent;
+}
+.screen-content::-webkit-scrollbar {
+  width: 4px;
+}
+.screen-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.screen-content::-webkit-scrollbar-thumb {
+  background-color: #3f3f46;
+  border-radius: 2px;
+}
+.laptop-trackpad {
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out forwards;
+  opacity: 0;
+}
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-slide-up {
+    animation: none;
+    opacity: 1;
+  }
+}
