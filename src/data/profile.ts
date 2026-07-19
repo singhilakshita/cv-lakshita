@@ -5,12 +5,12 @@ export const profile = {
   tagline: "I turn ambiguous problems into shipped fintech products.",
   location: "Pune, India",
   email: "lakshitasinghi03@gmail.com",
-  phone: "+91 6265468429",
+  phone: "+916265468429",
   github: "https://github.com/singhilakshita",
   linkedin: "https://linkedin.com/in/lakshita-singhi-760676227",
   portfolio: "https://cv-lakshita.vercel.app",
   availability:
-    "Notice period: 15–30 days · Open to remote-first, hybrid in Pune / Bengaluru · PM / APM / Product Owner roles",
+    "Notice period: 15–30 days · Open to remote-first, hybrid in India · PM / APM / Product Owner roles",
   // Casual blurb shown on the portfolio homepage hero
   intro:
     "Product Manager with 2+ years shipping 0-to-1 agentic AI, B2B SaaS, corporate cards, digital banking and consumer growth products. I own the whole arc — discovery, competitive research, PRDs, pricing, GTM and KPI-led delivery — and I prototype with AI before a single sprint is planned, so stakeholders see the product, not a slide.",
@@ -60,7 +60,7 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    company: "Dice.Tech (fintech · acquired by Zaggle)",
+    company: "Dice.Tech",
     role: "Associate Product Manager — Platform Growth & Enterprise Products",
     period: "Aug 2024 — Present",
     points: [
@@ -588,10 +588,10 @@ export const projects: Project[] = [
   },
   {
     slug: "shipfinix-marketplace",
-    name: "ShipFinix — Verified Marketplace Operations",
+    name: "High-Value Marketplace Operations Platform",
     tagline: "0→1 internal operations & trust layer for a high-value asset marketplace.",
     description:
-      "A product I scoped end-to-end — the admin/operations backbone for a high-value asset marketplace (maritime & certified premium goods): seller onboarding, listing verification, transaction handling, payouts and disputes, with RBAC and maker-checker approvals. I authored the full PRD and built a working prototype.",
+      "A product I scoped end-to-end — the admin/operations backbone for a high-value asset marketplace: seller onboarding, listing verification, transaction handling, payouts and disputes, with RBAC and maker-checker approvals. I authored the full PRD and built a working prototype.",
     stack: ["Marketplace ops", "RBAC & maker-checker", "Risk scoring", "PRD", "AI-native prototype"],
     highlights: [
       "Authored a ~18-section PRD: lifecycle state machines, a 0–100 weighted risk-scoring engine, SLA/notification matrices, edge cases and a phased MVP→Phase-3 plan.",
