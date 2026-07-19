@@ -11,13 +11,13 @@
   <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-v4-06B6D4?logo=tailwindcss&logoColor=white">
 </p>
 
-**Live: [lakshita-singhi.vercel.app](https://lakshita-singhi.vercel.app/)**
+**Live: [cv-lakshita.vercel.app](https://cv-lakshita.vercel.app/)**
 
 Interactive CV for **Lakshita Singhi** — AI-Native Fintech Product Manager. A
 portfolio that demonstrates the work instead of listing it: case studies with
 real product metrics, a pointer-tracked product-dashboard mockup (pure CSS 3D
 transforms, no WebGL), a print-perfect
-[résumé view](https://lakshita-singhi.vercel.app/#resume) (PDF via the print
+[résumé view](https://cv-lakshita.vercel.app/#resume) (PDF via the print
 dialog), and an AI assistant ("Lumi") that answers questions about her
 experience in first person.
 
@@ -25,6 +25,26 @@ Inspired by [santifer/cv-santiago](https://github.com/santifer/cv-santiago),
 rebuilt and simplified: the entire CV fits in an LLM's context, so there is no
 RAG pipeline — knowledge lives in a single system prompt
 ([api/_lib/system-prompt.ts](api/_lib/system-prompt.ts)).
+
+## Highlights
+
+- **AI assistant "Lumi"** — a floating chat that answers in first person as
+  Lakshita, grounded in the real CV data. Provider-agnostic: streams from Groq,
+  Gemini or Anthropic, with prompt-injection guardrails.
+- **Fintech case studies** — Emirates NBD corporate cards ($2.8M TAM), Club
+  Dice consumer growth (50K users), YES Bank digital-banking PaaS, agentic
+  corporate travel (85% faster visas) and Pine Labs / JioPay white-label GTM.
+- **Product deep-dives** — three 0→1 builds (Mileway, PaymentsLab, Kursi)
+  presented through a PM lens: discovery → user stories → product decisions →
+  success metrics → GTM, with real screenshots and a device-wall switcher.
+- **Print-perfect résumé** at `/#resume` — the same source data, ATS-friendly,
+  export to PDF via the browser print dialog.
+- **Interaction polish** — pointer-tracked 3D product-dashboard hero (pure CSS,
+  no WebGL), ⌘K command palette, scroll-reveal animations and a count-up
+  metrics band, all respecting `prefers-reduced-motion`.
+- **Single source of truth** — [src/data/profile.ts](src/data/profile.ts)
+  drives the page *and* the chatbot's knowledge; the system prompt is
+  regenerated from it at build time, so the two can never drift.
 
 ## Stack
 

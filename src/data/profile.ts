@@ -8,7 +8,7 @@ export const profile = {
   phone: "+91 6265468429",
   github: "https://github.com/singhilakshita",
   linkedin: "https://linkedin.com/in/lakshita-singhi-760676227",
-  portfolio: "",
+  portfolio: "https://cv-lakshita.vercel.app",
   availability:
     "Notice period: 15–30 days · Open to remote-first, hybrid in Pune / Bengaluru · PM / APM / Product Owner roles",
   // Casual blurb shown on the portfolio homepage hero
