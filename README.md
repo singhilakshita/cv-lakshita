@@ -13,7 +13,7 @@
 
 **Live: [cv-lakshita.vercel.app](https://cv-lakshita.vercel.app/)**
 
-Interactive CV for **Lakshita Singhi** — AI-Native Fintech Product Manager. A
+Interactive CV for **Lakshita Singhi** — Product Manager. A
 portfolio that demonstrates the work instead of listing it: case studies with
 real product metrics, a pointer-tracked product-dashboard mockup (pure CSS 3D
 transforms, no WebGL), a print-perfect

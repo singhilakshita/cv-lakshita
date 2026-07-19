@@ -1,7 +1,7 @@
 export const profile = {
   name: "Lakshita Singhi",
-  title: "AI-Native Fintech Product Manager",
-  resumeTitle: "Product Manager — Fintech, Payments & AI-Native Products",
+  title: "Product Manager",
+  resumeTitle: "Product Manager",
   tagline: "I turn ambiguous problems into shipped fintech products.",
   location: "Pune, India",
   email: "lakshitasinghi03@gmail.com",
@@ -13,10 +13,10 @@ export const profile = {
     "Notice period: 15–30 days · Open to remote-first, hybrid in Pune / Bengaluru · PM / APM / Product Owner roles",
   // Casual blurb shown on the portfolio homepage hero
   intro:
-    "AI-native fintech Product Manager with 2+ years shipping 0-to-1 agentic AI, B2B SaaS, corporate cards, digital banking and consumer growth products. I own the whole arc — discovery, competitive research, PRDs, pricing, GTM and KPI-led delivery — and I prototype with AI before a single sprint is planned, so stakeholders see the product, not a slide.",
+    "Product Manager with 2+ years shipping 0-to-1 agentic AI, B2B SaaS, corporate cards, digital banking and consumer growth products. I own the whole arc — discovery, competitive research, PRDs, pricing, GTM and KPI-led delivery — and I prototype with AI before a single sprint is planned, so stakeholders see the product, not a slide.",
   // Formal summary shown on the résumé view (ATS-friendly, keyword-dense)
   summary:
-    "AI-native fintech Product Manager with 2+ years building 0-to-1 agentic AI, B2B SaaS, enterprise fintech, and platform products across corporate cards, digital banking, expense management, UPI/PPI payment infrastructure, in-app growth engines, and workforce automation. Currently at Dice.Tech, driving product discovery, competitive market research, PRDs, platform commercialization, GTM planning, pricing models, stakeholder alignment, and KPI-led delivery across enterprise banking and consumer growth products. Strong at turning ambiguous user and business problems into shipped product surfaces using AI tools, API-first thinking, analytics, and cross-functional execution.",
+    "Product Manager with 2+ years building 0-to-1 agentic AI, B2B SaaS, enterprise fintech, and platform products across corporate cards, digital banking, expense management, UPI/PPI payment infrastructure, in-app growth engines, and workforce automation. Currently at Dice.Tech, driving product discovery, competitive market research, PRDs, platform commercialization, GTM planning, pricing models, stakeholder alignment, and KPI-led delivery across enterprise banking and consumer growth products. Strong at turning ambiguous user and business problems into shipped product surfaces using AI tools, API-first thinking, analytics, and cross-functional execution.",
 };
 
 export const education = {
