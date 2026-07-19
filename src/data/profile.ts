@@ -310,7 +310,7 @@ export const projects: Project[] = [
     tagline: "0→1 expense, mileage & travel product — a consumer-grade enterprise app across five surfaces.",
     description:
       "A cross-platform expense-and-travel product I drove with the engineering team — from discovery and user stories to the reimbursement-policy model and rollout. It directly extends the corporate-card and expense work I own at Dice: same domain, taken end-to-end as a product.",
-    stack: ["Android", "iOS", "Wear OS", "watchOS", "Desktop", "Offline-first", "AI assistant"],
+    stack: ["Cross-platform", "Offline-first", "Expense & travel", "AI assistant", "Multi-surface"],
     highlights: [
       "Ran discovery across corporate travellers, approvers and finance ops to map the booking → expense → reimbursement journey and its friction points.",
       "Authored the PRD and acceptance criteria for a reimbursement-policy engine — per-vehicle rate rules with approval-side policy-violation flags.",
@@ -358,7 +358,7 @@ export const projects: Project[] = [
         },
         {
           heading: "Scope & rollout",
-          body: "The product ships across Android, iOS, Wear OS, watchOS and Desktop from one shared data model, with home-screen widgets and an iOS Live Activity for in-progress trips. An offline, retrieval-grounded assistant lets users ask about their own trips and expenses — assist, not autopilot — keeping a human in the loop on anything that touches money.",
+          body: "The product ships across mobile, watch and desktop surfaces from one shared data model, with home-screen widgets and an iOS Live Activity for in-progress trips. An offline, retrieval-grounded assistant lets users ask about their own trips and expenses — assist, not autopilot — keeping a human in the loop on anything that touches money.",
         },
       ],
       metrics: [
@@ -368,7 +368,7 @@ export const projects: Project[] = [
         { value: "1", label: "durable claim journal" },
       ],
       techStack: [
-        { group: "Product surfaces", items: ["Android + iOS phones", "Wear OS + watchOS", "Compose Desktop", "Widgets + iOS Live Activity"] },
+        { group: "Product surfaces", items: ["Mobile phones", "Wearables", "Desktop", "Widgets + iOS Live Activity"] },
         { group: "Domain logic I specced", items: ["Reimbursement-rate policy engine", "Approval-side policy-violation flags", "Durable submit-outbox (no lost / duplicate claims)"] },
         { group: "AI & assist", items: ["Offline retrieval-grounded assistant", "Voice input / output", "Local usage analytics"] },
       ],
@@ -389,7 +389,7 @@ export const projects: Project[] = [
       { file: "create_trip_screen.png", caption: "Create trip request" },
       { file: "payables_home_screen.png", caption: "Payables hub" },
       { file: "cards_home_screen.png", caption: "Cards home" },
-      { file: "wear_dashboard.png", caption: "Wear OS — dashboard" },
+      { file: "wear_dashboard.png", caption: "Watch — dashboard" },
       { file: "watchos_app.png", caption: "watchOS app" },
       { file: "widget_ios_home.png", caption: "iOS home-screen widget" },
       { file: "live_activity_dynamic_island.png", caption: "Dynamic Island — tracking" },
@@ -402,7 +402,7 @@ export const projects: Project[] = [
     tagline: "A payments product exploration — every gateway and money-movement rail behind one checkout.",
     description:
       "A payments product I shaped with the engineering lead, mapping the full money-movement surface — pay-in, payouts, mandates, card vault, marketplace split and wallet — the same rails I work with across UPI, PPI and corporate cards at Dice. My job: define the coverage strategy, the trust model, and what 'settled' actually means to a user.",
-    stack: ["Android", "iOS", "Payments", "UPI", "Multi-gateway"],
+    stack: ["Payments", "UPI", "Multi-gateway", "Multi-rail", "Trust model"],
     highlights: [
       "Framed the product bet: one checkout contract over 66 gateways, so adding a provider is a config decision, not a rebuild.",
       "Set the trust requirement — a client 'success' is only a hint; the server decides truth after verification and webhook reconciliation.",
@@ -487,7 +487,7 @@ export const projects: Project[] = [
     tagline: "A consumer social game — product design for onboarding, engagement and retention.",
     description:
       "A consumer product where I owned the player journey: the onboarding funnel, progressive-disclosure UX, retention loops and accessibility. It's deliberate range — proof I carry consumer growth thinking, not just enterprise fintech.",
-    stack: ["Android", "iOS", "Desktop", "Web", "Consumer"],
+    stack: ["Consumer", "Cross-platform", "Onboarding", "Retention", "Accessibility"],
     highlights: [
       "Designed a tutorial-first onboarding funnel that teaches one mechanic at a time, so a first-timer isn't handed an expert dashboard.",
       "Specced progressive disclosure — Focus → Guided → Analyst density layers players graduate through as they learn.",
@@ -535,7 +535,7 @@ export const projects: Project[] = [
         },
         {
           heading: "Range & rollout",
-          body: "It ships on Android, iOS, Desktop and Web (playable in the browser), with ten AI opponent personas so there's always a match. The point on this portfolio isn't the game — it's that I can carry a consumer product from onboarding to retention with the same rigor I bring to enterprise fintech.",
+          body: "It ships on mobile, desktop and web (playable in the browser), with ten AI opponent personas so there's always a match. The point on this portfolio isn't the game — it's that I can carry a consumer product from onboarding to retention with the same rigor I bring to enterprise fintech.",
         },
       ],
       metrics: [

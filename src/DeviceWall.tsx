@@ -11,6 +11,15 @@ const PLATFORM_ICON: Record<ProjectTarget["platform"], React.ComponentType<{ siz
   Web: Globe,
 };
 
+const PLATFORM_LABEL: Record<ProjectTarget["platform"], string> = {
+  Android: "Mobile",
+  iOS: "iOS",
+  "Wear OS": "Watch",
+  watchOS: "Apple Watch",
+  Desktop: "Desktop",
+  Web: "Web",
+};
+
 /** Fires `inView` once, on first intersection — gates lazy iframe mounts. */
 function useInView<T extends HTMLElement>(threshold = 0.15) {
   const ref = useRef<T>(null);
@@ -171,7 +180,7 @@ function DeviceFrame({ target, slug, shot }: { target: ProjectTarget; slug: stri
           <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
           <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
           <span className="h-2.5 w-2.5 rounded-full bg-green-400/70" />
-          <span className="ml-2 text-[10px] text-zinc-500">{isNativeDesktop ? `${target.platform} window` : `${target.platform} preview (desktop capture)`}</span>
+          <span className="ml-2 text-[10px] text-zinc-500">{isNativeDesktop ? `${PLATFORM_LABEL[target.platform]} window` : `${PLATFORM_LABEL[target.platform]} preview (desktop capture)`}</span>
         </div>
         {shots.length > 0 && (
           <FitImage src={src(shots[shot])} alt={`${target.platform} window`} targetAspect={16 / 9} className="aspect-video w-full" />
@@ -269,7 +278,7 @@ export function DeviceWall({ targets, slug, accent }: { targets: ProjectTarget[]
                   : "border-line text-zinc-400 hover:border-accent/40 hover:text-zinc-200"
               }`}
             >
-              <TIcon size={14} /> {t.platform}
+              <TIcon size={14} /> {PLATFORM_LABEL[t.platform]}
               {t.liveUrl && <Play size={9} fill="currentColor" className="text-accent" />}
             </button>
           );

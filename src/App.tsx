@@ -7,10 +7,6 @@ import {
   FileText,
   Github,
   Linkedin,
-  Smartphone,
-  Watch,
-  Monitor,
-  Globe,
   Play,
 } from "lucide-react";
 import { profile, metrics, experience, education, caseStudies, skills, projects, recentGrowth, sharedFoundation } from "./data/profile.ts";
@@ -19,7 +15,6 @@ import { AmbientBackground } from "./AmbientBackground.tsx";
 import { TiltPhone } from "./TiltPhone.tsx";
 import { TiltCard } from "./TiltCard.tsx";
 import { AnimatedMetric } from "./AnimatedMetric.tsx";
-import { ScrollBot } from "./ScrollBot.tsx";
 import { ResumeView } from "./ResumeView.tsx";
 import { ProjectDetail } from "./ProjectDetail.tsx";
 import { CommandPalette } from "./CommandPalette.tsx";
@@ -30,24 +25,6 @@ const SKILL_ICONS: Record<string, string> = {
   "Fintech & Payments": "💳",
   "Growth & Analytics": "📈",
 };
-
-// Known multiplatform targets a project's `stack` might declare — matched in
-// declared order so the badge row reads like a device lineup, not a bag of tags.
-const PLATFORM_ICONS: { match: (s: string) => boolean; label: string; icon: React.ComponentType<{ size?: number }> }[] = [
-  { match: (s) => s === "Android", label: "Android", icon: Smartphone },
-  { match: (s) => s === "iOS", label: "iOS", icon: Smartphone },
-  { match: (s) => s === "Wear OS", label: "Wear OS", icon: Watch },
-  { match: (s) => s === "watchOS", label: "watchOS", icon: Watch },
-  { match: (s) => s === "Desktop", label: "Desktop", icon: Monitor },
-  { match: (s) => s.startsWith("Web"), label: "Web", icon: Globe },
-];
-
-function platformsOf(stack: string[]) {
-  return stack.flatMap((s) => {
-    const hit = PLATFORM_ICONS.find((p) => p.match(s));
-    return hit ? [hit] : [];
-  });
-}
 
 // Projects with a playable web build — hints the "▶ Live" badge on the card;
 // the detail page is where it's actually embedded/linked.
@@ -310,7 +287,6 @@ function Projects() {
               if (p.detail) { window.location.hash = href; window.scrollTo({ top: 0 }); }
               else window.open(href, "_blank", "noreferrer");
             };
-            const platforms = platformsOf(p.stack);
             const isLive = LIVE_WEB_PROJECTS.has(p.slug);
             return (
             <Reveal key={p.slug} className="h-full" delay={(i % 2) * 120}>
@@ -327,26 +303,14 @@ function Projects() {
                     <span className="shrink-0 text-xs text-zinc-500">{p.status}</span>
                   </div>
                   <p className="mt-1 text-sm font-medium text-accent">{p.tagline}</p>
-                  {platforms.length > 0 && (
+                  {isLive && (
                     <div className="mt-3 flex flex-wrap items-center gap-1.5">
-                      {platforms.map(({ label, icon: Icon }) => (
-                        <span
-                          key={label}
-                          title={label}
-                          className="flex items-center gap-1 rounded-full border border-line bg-surface px-2 py-1 text-[10px] font-medium text-zinc-400"
-                        >
-                          <Icon size={11} />
-                          {label}
-                        </span>
-                      ))}
-                      {isLive && (
-                        <span
-                          title="Playable web build"
-                          className="live-badge flex items-center gap-1 rounded-full border border-accent/40 px-2 py-1 text-[10px] font-semibold text-ink"
-                        >
-                          <Play size={10} fill="currentColor" /> Live
-                        </span>
-                      )}
+                      <span
+                        title="Playable web build"
+                        className="live-badge flex items-center gap-1 rounded-full border border-accent/40 px-2 py-1 text-[10px] font-semibold text-ink"
+                      >
+                        <Play size={10} fill="currentColor" /> Live
+                      </span>
                     </div>
                   )}
                   <p className="mt-3 text-sm leading-relaxed text-zinc-400">{p.description}</p>
@@ -686,7 +650,6 @@ export default function App() {
         <Skills />
         <Contact />
       </main>
-      <ScrollBot />
       <FloatingChat />
     </div>
   );
