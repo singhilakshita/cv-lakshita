@@ -1,7 +1,7 @@
 # cv-lakshita
 
 <p align="center">
-  <img src="./public/assets/readme/hero.gif" width="100%" alt="cv-lakshita — an interactive PM résumé with an AI assistant">
+  <img src="./public/assets/readme/banner.svg" width="100%" alt="cv-lakshita — an interactive PM résumé with an AI assistant">
 </p>
 
 <p align="center">
@@ -37,45 +37,23 @@ one SSE format so the widget never knows the difference.
 
 ```bash
 npm install
-cp .env.local.example .env.local   # add your ANTHROPIC_API_KEY to enable chat
+cp .env.local.example .env.local   # add your GROQ_API_KEY to enable chat
 npm run dev
 ```
 
 Open http://localhost:5173. The site works without a key; the chat widget
 shows a contact fallback until one of `GROQ_API_KEY` / `GEMINI_API_KEY` /
-`ANTHROPIC_API_KEY` is set. In dev, a Vite middleware
-([vite.config.ts](vite.config.ts)) serves `/api/chat` with the same handler
-Vercel runs in production — no `vercel dev` needed.
+`ANTHROPIC_API_KEY` is set (priority: Groq → Gemini → Anthropic). In dev, a
+Vite middleware ([vite.config.ts](vite.config.ts)) serves `/api/chat` with the
+same handler Vercel runs in production — no `vercel dev` needed.
 
-## Deploy
+## Deploy — Vercel (site + chat in one place)
 
-### Option A — Vercel (site + chat in one place)
-
-```bash
-npx vercel
-```
-
-Set `ANTHROPIC_API_KEY` in the Vercel project's environment variables.
-`api/chat.ts` runs on the Edge runtime and streams Anthropic SSE straight
-through to the widget.
-
-### Option B — GitHub Pages (static) + chat hosted elsewhere
-
-GitHub Pages can't run serverless functions, so the site and the chat
-backend split:
-
-1. Push this repo to GitHub and enable **Settings → Pages → Source: GitHub
-   Actions**. The included workflow
-   ([.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml))
-   builds and deploys on every push to `main`, handling the `/repo/` base
-   path automatically.
-2. For the chatbot, deploy the same repo to Vercel (free tier) for the
-   `/api/chat` function only, then set a repo **variable** `CHAT_API_URL`
-   (e.g. `https://cv-siddharth.vercel.app/api/chat`). On Vercel, set
-   `ALLOWED_ORIGIN` to your Pages origin (e.g.
-   `https://darkpandawarrior.github.io`) to scope CORS.
-3. Without `CHAT_API_URL`, the site still deploys fine — the chat widget
-   shows the email fallback.
+Import the repo at [vercel.com/new](https://vercel.com/new) (Framework preset:
+Vite, auto-detected), then add an environment variable **`GROQ_API_KEY`** with
+your free key from [console.groq.com/keys](https://console.groq.com/keys) and
+click **Deploy**. `api/chat.ts` runs on the Edge runtime and streams the
+model's SSE straight through to the widget. Every push to `main` auto-redeploys.
 
 ## Structure
 

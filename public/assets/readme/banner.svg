@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0812"/>
+      <stop offset="1" stop-color="#150f24"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="10%" r="70%">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="10%" cy="100%" r="60%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="380" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="380" rx="24" fill="url(#glow)"/>
+  <rect width="1200" height="380" rx="24" fill="url(#glow2)"/>
+  <rect x="1.5" y="1.5" width="1197" height="377" rx="23" fill="none" stroke="#2c2545" stroke-width="1.5"/>
+
+  <!-- eyebrow -->
+  <g transform="translate(64,66)">
+    <circle cx="6" cy="-4" r="6" fill="#8b5cf6"/>
+    <text x="22" y="0" fill="#a78bfa" font-size="18" font-weight="600" letter-spacing="3">INTERACTIVE CV · AI ASSISTANT</text>
+  </g>
+
+  <!-- name -->
+  <text x="64" y="150" fill="#f4f2fb" font-size="66" font-weight="700" letter-spacing="-1">Lakshita Singhi</text>
+
+  <!-- title -->
+  <text x="64" y="196" fill="url(#accent)" font-size="30" font-weight="600">AI-Native Fintech Product Manager</text>
+
+  <!-- tagline -->
+  <text x="64" y="240" fill="#b9b3cc" font-size="21">I turn ambiguous problems into shipped fintech products.</text>
+
+  <!-- metric chips -->
+  <g transform="translate(64,286)" font-size="18">
+    <g>
+      <rect x="0" y="0" width="150" height="52" rx="12" fill="#1a1530" stroke="#3a2f5e" stroke-width="1"/>
+      <text x="18" y="24" fill="#8b5cf6" font-size="22" font-weight="700">$2.8M</text>
+      <text x="18" y="43" fill="#8f89a3" font-size="13">savings identified</text>
+    </g>
+    <g transform="translate(166,0)">
+      <rect x="0" y="0" width="150" height="52" rx="12" fill="#1a1530" stroke="#3a2f5e" stroke-width="1"/>
+      <text x="18" y="24" fill="#8b5cf6" font-size="22" font-weight="700">50K</text>
+      <text x="18" y="43" fill="#8f89a3" font-size="13">consumers launched</text>
+    </g>
+    <g transform="translate(332,0)">
+      <rect x="0" y="0" width="150" height="52" rx="12" fill="#1a1530" stroke="#3a2f5e" stroke-width="1"/>
+      <text x="18" y="24" fill="#8b5cf6" font-size="22" font-weight="700">85%</text>
+      <text x="18" y="43" fill="#8f89a3" font-size="13">faster visas</text>
+    </g>
+    <g transform="translate(498,0)">
+      <rect x="0" y="0" width="176" height="52" rx="12" fill="#1a1530" stroke="#3a2f5e" stroke-width="1"/>
+      <text x="18" y="24" fill="#8b5cf6" font-size="22" font-weight="700">12+</text>
+      <text x="18" y="43" fill="#8f89a3" font-size="13">enterprise clients</text>
+    </g>
+  </g>
+
+  <!-- right-side device mock -->
+  <g transform="translate(940,70)">
+    <rect x="0" y="0" width="196" height="240" rx="28" fill="#120f1e" stroke="#2c2545" stroke-width="2"/>
+    <circle cx="98" cy="16" r="4" fill="#0a0812"/>
+    <text x="20" y="46" fill="#a78bfa" font-size="14" font-weight="700">lakshita<tspan fill="#8b5cf6">.</tspan><tspan fill="#6f6a80">pm</tspan></text>
+    <rect x="20" y="60" width="156" height="52" rx="12" fill="#1a1530"/>
+    <text x="32" y="82" fill="#8b5cf6" font-size="12" font-weight="600">Club Dice · growth</text>
+    <rect x="32" y="92" width="14" height="10" rx="2" fill="#8b5cf6" opacity="0.45"/>
+    <rect x="52" y="88" width="14" height="14" rx="2" fill="#8b5cf6" opacity="0.6"/>
+    <rect x="72" y="82" width="14" height="20" rx="2" fill="#8b5cf6" opacity="0.75"/>
+    <rect x="92" y="76" width="14" height="26" rx="2" fill="#8b5cf6"/>
+    <rect x="112" y="70" width="14" height="32" rx="2" fill="#a78bfa"/>
+    <rect x="20" y="122" width="74" height="44" rx="12" fill="#1a1530"/>
+    <text x="32" y="146" fill="#8b5cf6" font-size="18" font-weight="700">50K</text>
+    <text x="32" y="160" fill="#8f89a3" font-size="10">consumers</text>
+    <rect x="102" y="122" width="74" height="44" rx="12" fill="#1a1530"/>
+    <text x="114" y="146" fill="#8b5cf6" font-size="18" font-weight="700">$2.8M</text>
+    <text x="114" y="160" fill="#8f89a3" font-size="10">savings</text>
+    <rect x="20" y="176" width="156" height="24" rx="8" fill="#1a1530"/>
+    <text x="32" y="192" fill="#b9b3cc" font-size="11">AI-native PRDs &amp; prototyping</text>
+    <rect x="20" y="208" width="156" height="18" rx="8" fill="#1a1530"/>
+    <text x="32" y="221" fill="#8f89a3" font-size="10">12+ enterprise clients · 10K+ cards</text>
+  </g>
+</svg>
