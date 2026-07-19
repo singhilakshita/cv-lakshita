@@ -18,7 +18,7 @@ import { ResumeView } from "./ResumeView.tsx";
 import { ProjectDetail } from "./ProjectDetail.tsx";
 import { CommandPalette } from "./CommandPalette.tsx";
 import { ProcessPipeline } from "./ProcessPipeline.tsx";
-import { LaptopSlideshow } from "./LaptopSlideshow.tsx";
+import { TiltPhone } from "./TiltPhone.tsx";
 import { caseStudyPipeline } from "./data/stages.ts";
 
 const SKILL_ICONS: Record<string, string> = {
@@ -169,7 +169,7 @@ function Hero() {
         </div>
         <p className="rise-in rise-in-3 mt-6 text-xs text-zinc-500">{profile.availability}</p>
       </div>
-      <LaptopSlideshow />
+      <TiltPhone />
     </section>
   );
 }

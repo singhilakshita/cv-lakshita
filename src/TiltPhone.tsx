@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { TrendingUp, CreditCard, Sparkles } from "lucide-react";
+import { CreditCard, Sparkles, Target, Zap, Users } from "lucide-react";
 
 const MAX_TILT_DEG = 14;
 const BASE = { rx: 8, ry: -12 };
@@ -102,24 +102,39 @@ export function TiltPhone() {
             lakshita<span className="text-accent">.</span>pm
           </p>
 
+          {/* PM Pipeline stages as app cards */}
           <div className="rounded-xl bg-card p-2.5">
             <div className="flex items-center gap-1.5 text-[10px] font-semibold text-accent">
-              <TrendingUp size={11} className="nav-wiggle" /> Club Dice · growth
+              <Target size={11} className="nav-wiggle" /> Ambiguous → Shipped
             </div>
-            {/* ascending product-metrics bar chart */}
-            <div className="mt-2 flex h-10 items-end gap-1">
-              <div className="flex-1 rounded-sm bg-accent/30" style={{ height: "35%" }} />
-              <div className="flex-1 rounded-sm bg-accent/45" style={{ height: "50%" }} />
-              <div className="flex-1 rounded-sm bg-accent/60" style={{ height: "62%" }} />
-              <div className="flex-1 rounded-sm bg-accent/75" style={{ height: "80%" }} />
-              <div className="flex-1 rounded-sm bg-accent" style={{ height: "100%" }} />
+            <div className="mt-2 flex flex-col gap-1.5">
+              <div className="flex items-center gap-2 text-[10px] text-zinc-300">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-accent/20 text-accent text-[8px] font-bold">1</span>
+                <span>Discover & Frame</span>
+              </div>
+              <div className="flex items-center gap-2 text-[10px] text-zinc-300">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-accent/20 text-accent text-[8px] font-bold">2</span>
+                <span>Spec & Prioritize</span>
+              </div>
+              <div className="flex items-center gap-2 text-[10px] text-zinc-300">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-accent/20 text-accent text-[8px] font-bold">3</span>
+                <span>AI-Native Prototype</span>
+              </div>
+              <div className="flex items-center gap-2 text-[10px] text-zinc-300">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-accent/20 text-accent text-[8px] font-bold">4</span>
+                <span>Build & Ship</span>
+              </div>
+              <div className="flex items-center gap-2 text-[10px] text-zinc-300">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-accent/20 text-accent text-[8px] font-bold">5</span>
+                <span>Measure & Iterate</span>
+              </div>
             </div>
-            <p className="mt-1.5 text-[9px] text-zinc-500">+30% engagement · +25% MAU</p>
           </div>
 
+          {/* Key metrics row */}
           <div className="grid grid-cols-2 gap-2">
             <div className="rounded-xl bg-card p-2.5">
-              <p className="font-display text-base font-bold text-accent">50K</p>
+              <p className="font-display text-base font-bold text-accent">50K+</p>
               <p className="text-[9px] leading-tight text-zinc-500">consumers launched</p>
             </div>
             <div className="rounded-xl bg-card p-2.5">
@@ -133,6 +148,12 @@ export function TiltPhone() {
           </div>
           <div className="flex items-center gap-1.5 rounded-xl bg-card p-2.5 text-[10px] text-zinc-400">
             <Sparkles size={11} className="shrink-0 text-accent" /> AI-native PRDs & prototyping
+          </div>
+          <div className="flex items-center gap-1.5 rounded-xl bg-card p-2.5 text-[10px] text-zinc-400">
+            <Users size={11} className="shrink-0 text-accent" /> 9-person team · 40% incident reduction
+          </div>
+          <div className="flex items-center gap-1.5 rounded-xl bg-card p-2.5 text-[10px] text-zinc-400">
+            <Zap size={11} className="shrink-0 text-accent" /> 85% faster visa processing · Atlys integration
           </div>
         </div>
       </div>
