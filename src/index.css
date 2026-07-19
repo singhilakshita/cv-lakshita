@@ -102,6 +102,115 @@ html.resume-mode body {
   }
 }
 
+/* Product arc: one-shot connector draw and staged cards. */
+.pipeline-track {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.pipeline-connector-base,
+.pipeline-connector-draw {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+}
+
+.pipeline-connector-base {
+  stroke: rgba(161, 161, 170, 0.18);
+}
+
+.pipeline-connector-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pipeline-stage {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.45s ease-out var(--pipeline-delay),
+    transform 0.45s ease-out var(--pipeline-delay),
+    border-color 0.2s ease;
+}
+
+.pipeline-revealed .pipeline-connector-draw {
+  stroke-dashoffset: 0;
+}
+
+.pipeline-revealed .pipeline-stage {
+  opacity: 1;
+  transform: none;
+}
+
+.pipeline-card-sketch {
+  border-style: dashed;
+}
+
+.pipeline-sketch-copy {
+  color: rgba(161, 161, 170, 0.7);
+  filter: blur(0.6px);
+  font-family: "Caveat", cursive;
+  font-style: italic;
+  letter-spacing: 0.015em;
+}
+
+.pipeline-card-proto {
+  background-image:
+    linear-gradient(rgba(167, 139, 250, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, 0.045) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.pipeline-node {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  flex: none;
+  border-radius: 999px;
+  background: #71717a;
+  box-shadow: 0 0 0 3px rgba(113, 113, 122, 0.1);
+}
+
+.pipeline-node-draft {
+  background: #5eead4;
+  box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.12);
+}
+
+.pipeline-node-proto {
+  border-radius: 1px;
+  background: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.12);
+}
+
+.pipeline-node-shipped {
+  background: #ddd6fe;
+  box-shadow: 0 0 0 3px rgba(196, 181, 253, 0.2), 0 0 12px rgba(139, 92, 246, 0.7);
+}
+
+@media (min-width: 48rem) {
+  .pipeline-track {
+    grid-template-columns: repeat(var(--pipeline-columns), minmax(0, 1fr));
+  }
+
+  .process-pipeline-compact .pipeline-track {
+    gap: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pipeline-connector-draw {
+    stroke-dashoffset: 0;
+    transition: none;
+  }
+
+  .pipeline-stage {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 @media print {
   body {
     background: white;

@@ -12,18 +12,20 @@ import {
 import { profile, metrics, experience, education, caseStudies, skills, projects, recentGrowth, sharedFoundation } from "./data/profile.ts";
 import { FloatingChat, openChat } from "./FloatingChat.tsx";
 import { AmbientBackground } from "./AmbientBackground.tsx";
-import { TiltPhone } from "./TiltPhone.tsx";
 import { TiltCard } from "./TiltCard.tsx";
 import { AnimatedMetric } from "./AnimatedMetric.tsx";
 import { ResumeView } from "./ResumeView.tsx";
 import { ProjectDetail } from "./ProjectDetail.tsx";
 import { CommandPalette } from "./CommandPalette.tsx";
+import { ProcessPipeline } from "./ProcessPipeline.tsx";
+import { caseStudyPipeline, heroStages } from "./data/stages.ts";
 
 const SKILL_ICONS: Record<string, string> = {
-  "Product & Strategy": "🧭",
-  "AI & Automation": "🤖",
-  "Fintech & Payments": "💳",
-  "Growth & Analytics": "📈",
+  "Discovery & Research": "🔍",
+  "Specing & Prioritization": "✍️",
+  "AI-Native Prototyping": "🤖",
+  "Delivery & GTM": "🚀",
+  "Metrics & Growth": "📈",
 };
 
 // Projects with a playable web build — hints the "▶ Live" badge on the card;
@@ -123,7 +125,9 @@ function Nav() {
             onClick={openChat}
             className="flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-sm font-semibold text-ink transition hover:bg-accent-dim"
           >
-            <MessageCircle size={15} /> <span className="hidden sm:inline">Ask my AI</span>
+            <MessageCircle size={15} />
+            <span className="status-pulse h-1.5 w-1.5 rounded-full bg-ink" aria-hidden />
+            <span className="hidden sm:inline">Ask my AI</span>
           </button>
         </div>
       </nav>
@@ -133,7 +137,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="section-y relative mx-auto grid max-w-5xl items-center gap-10 px-6 lg:grid-cols-[1fr_280px]">
+    <section id="top" className="section-y relative mx-auto max-w-5xl px-6">
       <div>
         <p className="rise-in mb-4 flex items-center gap-2 text-sm text-zinc-400">
           <MapPin size={14} className="text-accent" /> {profile.location} · {profile.title}
@@ -164,7 +168,7 @@ function Hero() {
         </div>
         <p className="rise-in rise-in-3 mt-6 text-xs text-zinc-500">{profile.availability}</p>
       </div>
-      <TiltPhone />
+      <ProcessPipeline stages={heroStages} />
     </section>
   );
 }
@@ -203,6 +207,7 @@ function CaseStudies() {
                 </div>
                 <h3 className="font-display mt-2 text-2xl font-bold sm:text-3xl">{featured.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-zinc-400 sm:text-base">{featured.problem}</p>
+                <ProcessPipeline stages={caseStudyPipeline} compact />
                 <ul className="mt-5 space-y-2.5 text-sm leading-relaxed text-zinc-300">
                   {featured.approach.slice(0, 5).map((a) => (
                     <li key={a} className="flex gap-2">
@@ -513,9 +518,9 @@ function Skills() {
   return (
     <section id="skills" className="section-y mx-auto max-w-5xl px-6">
       <Reveal>
-        <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent/60">// tech stack</p>
+        <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent/60">// the product arc</p>
         <h2 className="font-display mb-2 text-h2 font-bold tracking-tight">Skills</h2>
-        <p className="mb-8 text-zinc-400">Filter by area, or just hover the cloud.</p>
+        <p className="mb-8 text-zinc-400">Mapped to the same arc as above — filter by stage.</p>
       </Reveal>
 
       <Reveal>

@@ -26,10 +26,10 @@ export const education = {
 };
 
 export const metrics = [
-  { value: "700+", label: "SMEs analyzed (TAM)", detail: "1.2M users · $2.8M annual savings identified — Emirates NBD corporate cards" },
-  { value: "50K", label: "consumers launched to", detail: "Club Dice growth engine — +30% engagement, +25% MAU" },
-  { value: "70%", label: "faster visa processing", detail: "0→1 visa-integrated enterprise travel platform" },
-  { value: "12+", label: "enterprise clients onboarded", detail: "White-label fintech GTM · 10K+ corporate cards issued" },
+  { value: "700+", label: "SMEs analyzed (TAM)", detail: "Emirates NBD corporate cards · 1.2M users · $2.8M annual savings identified · 2024–25" },
+  { value: "50K", label: "consumers launched", detail: "Club Dice growth engine · +30% engagement · +25% MAU · 2024–25" },
+  { value: "85%", label: "faster visa processing", detail: "Visa-integrated enterprise travel · versus the prior manual workflow" },
+  { value: "12+", label: "enterprise clients onboarded", detail: "Pine Labs & JioPay white-label GTM · 10K+ corporate cards · 2024–25" },
 ];
 
 // Core competency chips — shown in the résumé header and on LinkedIn
@@ -70,7 +70,7 @@ export const experience: Experience[] = [
       },
       {
         label: "Platform Growth (Club Dice & in-app marketing)",
-        text: "Launched Club Dice end-to-end to 50K consumers with growth loops that drove +30% portal engagement and +25% MAU. Defined personas and A/B-tested cohort targeting for an in-app marketing engine (8%+ CTR, +22% feature adoption), and shipped an employee-benefits module via a partnership with Hamara Benefits (a zero-cost employee benefits suite) that lifted engagement 40%.",
+        text: "Launched Club Dice end-to-end to 50K consumers across 2024–25, with growth loops that drove +30% portal engagement and +25% MAU. Defined personas and A/B-tested cohort targeting for an in-app marketing engine (8%+ CTR, +22% feature adoption), and shipped an employee-benefits module via a partnership with Hamara Benefits (a zero-cost employee benefits suite) that lifted engagement 40%.",
       },
       {
         label: "Digital Banking PaaS (YES Bank)",
@@ -78,7 +78,7 @@ export const experience: Experience[] = [
       },
       {
         label: "Enterprise Travel & AI Agents",
-        text: "Architected a 0→1 visa-integrated travel platform — built via a live Atlys integration — that cut processing time by 70%, and reimagined corporate travel as an agentic workflow — co-owning the PRD for 6+ AI agents (calendar inference, policy compliance and inventory ranking) with a dual-change recalibration model, projected to reduce trip-planning time by 80%. Architected Travel-Desk (TDB) and Self-Serve-Booking (SBT) flows API-first with role-based approvals (user / approver / travel desk) across SSO, payments and real-time status.",
+        text: "Architected a 0→1 visa-integrated travel platform — built via a live Atlys integration — that cut processing time by 85%, and reimagined corporate travel as an agentic workflow — co-owning the PRD for 6+ AI agents (calendar inference, policy compliance and inventory ranking) with a dual-change recalibration model, projected to reduce trip-planning time by 80%. Architected Travel-Desk (TDB) and Self-Serve-Booking (SBT) flows API-first with role-based approvals (user / approver / travel desk) across SSO, payments and real-time status.",
       },
       {
         label: "White-label Fintech GTM (Pine Labs & JioPay)",
@@ -162,7 +162,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "agentic-travel",
     title: "Enterprise travel — reimagined as AI agents",
-    metric: "70% faster visas",
+    metric: "85% faster visas",
     summary:
       "A 0→1 visa-integrated travel platform, then a bet on agentic workflows for near-zero-input booking.",
     problem:
@@ -174,7 +174,7 @@ export const caseStudies: CaseStudy[] = [
       "Built tiered and usage-based pricing models to evaluate GTM and commercialization trade-offs.",
     ],
     outcome:
-      "Visa processing time cut 70%, with an agentic booking experience projected to reduce trip-planning time by 80%.",
+      "Visa processing time cut 85%, with an agentic booking experience projected to reduce trip-planning time by 80%.",
     tags: ["Agentic AI", "API-first", "Pricing", "0→1"],
   },
   {
@@ -198,23 +198,27 @@ export const caseStudies: CaseStudy[] = [
 
 export const languages = ["SQL", "Java", "C", "C++"];
 
-// 4-group layout for portfolio homepage skill cards
+// Product-arc layout for portfolio homepage skill cards
 export const skills: { group: string; items: string[] }[] = [
   {
-    group: "Product & Strategy",
-    items: ["Product discovery & PRDs", "Roadmapping & prioritization (RICE / MoSCoW)", "OKRs & KPI definition", "User research & interviews", "Competitive market research", "GTM & pricing strategy"],
+    group: "Discovery & Research",
+    items: ["User research & interviews", "Competitive market research", "TAM / market sizing", "Stakeholder mapping", "Problem framing"],
   },
   {
-    group: "AI & Automation",
-    items: ["Agentic AI product design", "Human-in-the-loop workflows", "LLM workflow automation", "AI-native prototyping (Lovable, Bolt, Emergent)", "Figma AI", "Claude & ChatGPT for specs"],
+    group: "Specing & Prioritization",
+    items: ["PRDs & specs", "RICE / MoSCoW", "OKRs & KPI definition", "Backlog management", "Acceptance criteria", "User stories"],
   },
   {
-    group: "Fintech & Payments",
-    items: ["UPI / PPI / BBPS", "Corporate card programs & BIN hosting", "KYC / KYB flows", "Digital banking PaaS", "Expense management & reconciliation", "Payment gateway integrations"],
+    group: "AI-Native Prototyping",
+    items: ["Agentic AI product design", "Human-in-the-loop design", "Claude & ChatGPT for specs", "Lovable · Bolt · Emergent", "Figma AI"],
   },
   {
-    group: "Growth & Analytics",
-    items: ["Growth loops & funnels", "Cohort analysis & A/B testing", "Retention & adoption metrics", "SQL · Mixpanel · Amplitude", "Dashboards & reporting", "Data-driven prioritization"],
+    group: "Delivery & GTM",
+    items: ["GTM & launch planning", "Pricing & packaging", "Cross-functional execution", "Sprint planning · Agile", "Compliance (PCI-DSS · SOC)"],
+  },
+  {
+    group: "Metrics & Growth",
+    items: ["Growth loops & funnels", "Cohort & A/B testing", "SQL · Mixpanel · Amplitude", "Dashboards & reporting", "Retention & adoption"],
   },
 ];
 
