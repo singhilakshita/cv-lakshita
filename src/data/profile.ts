@@ -28,7 +28,7 @@ export const education = {
 export const metrics = [
   { value: "700+", label: "SMEs analyzed (TAM)", detail: "1.2M users · $2.8M annual savings identified — Emirates NBD corporate cards" },
   { value: "50K", label: "consumers launched to", detail: "Club Dice growth engine — +30% engagement, +25% MAU" },
-  { value: "85%", label: "faster visa processing", detail: "0→1 visa-integrated enterprise travel platform" },
+  { value: "70%", label: "faster visa processing", detail: "0→1 visa-integrated enterprise travel platform" },
   { value: "12+", label: "enterprise clients onboarded", detail: "White-label fintech GTM · 10K+ corporate cards issued" },
 ];
 
@@ -60,17 +60,17 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    company: "Dice.Tech",
+    company: "Dice.Tech (fintech · acquired by Zaggle)",
     role: "Associate Product Manager — Platform Growth & Enterprise Products",
     period: "Aug 2024 — Present",
     points: [
       {
         label: "Corporate Cards & Expense (Emirates NBD)",
-        text: "Led discovery and requirements for ENBD's corporate card platform — TAM analysis across 700+ SMEs and 1.2M users surfaced a $2.8M annual savings opportunity. Designed white-label card infrastructure (enterprise onboarding, issuance, spend controls) and multi-card/BIN programs with MCC, spend-limit and geo controls; accelerated corporate onboarding by 50–70%.",
+        text: "Led discovery and requirements for ENBD's corporate card platform — TAM analysis across 700+ SMEs and 1.2M users surfaced a $2.8M annual savings opportunity. Designed white-label card infrastructure (enterprise onboarding, issuance, spend controls) and multi-card/BIN programs with MCC, spend-limit and geo controls, including RBAC and KYC/KYB approval flows under PCI-DSS and UAE Central Bank regulatory compliance; accelerated corporate onboarding by 50–70%.",
       },
       {
         label: "Platform Growth (Club Dice & in-app marketing)",
-        text: "Launched Club Dice end-to-end to 50K consumers with growth loops that drove +30% portal engagement and +25% MAU. Defined personas and A/B-tested cohort targeting for an in-app marketing engine (8%+ CTR, +50% feature adoption), and shipped an employee-benefits module via a B2B partnership that lifted engagement 40%.",
+        text: "Launched Club Dice end-to-end to 50K consumers with growth loops that drove +30% portal engagement and +25% MAU. Defined personas and A/B-tested cohort targeting for an in-app marketing engine (8%+ CTR, +22% feature adoption), and shipped an employee-benefits module via a partnership with Hamara Benefits (a zero-cost employee benefits suite) that lifted engagement 40%.",
       },
       {
         label: "Digital Banking PaaS (YES Bank)",
@@ -78,7 +78,7 @@ export const experience: Experience[] = [
       },
       {
         label: "Enterprise Travel & AI Agents",
-        text: "Architected a 0→1 visa-integrated travel platform that cut processing time by 85%, and reimagined corporate travel as an agentic workflow — co-owning the PRD for 6+ AI agents with a dual-change recalibration model, projected to reduce trip-planning time by 80%. Built TDB/SBT flows API-first across SSO, payments and real-time status.",
+        text: "Architected a 0→1 visa-integrated travel platform — built via a live Atlys integration — that cut processing time by 70%, and reimagined corporate travel as an agentic workflow — co-owning the PRD for 6+ AI agents (calendar inference, policy compliance and inventory ranking) with a dual-change recalibration model, projected to reduce trip-planning time by 80%. Architected Travel-Desk (TDB) and Self-Serve-Booking (SBT) flows API-first with role-based approvals (user / approver / travel desk) across SSO, payments and real-time status.",
       },
       {
         label: "White-label Fintech GTM (Pine Labs & JioPay)",
@@ -86,7 +86,7 @@ export const experience: Experience[] = [
       },
       {
         label: "Product Operations",
-        text: "Drove issue-to-resolution for a 9-member FDE team resolving 200+ monthly issues — cut turnaround from 7 days to 48 hours, reduced live incidents by 65%, improved system stability 50%, SLA adherence 90% and CSAT 50%, translating recurring production issues into backlog improvements.",
+        text: "Drove issue-to-resolution for a 9-member FDE team resolving 200+ monthly issues — cut turnaround from 7 days to 48 hours, reduced live incidents by 40%, improved system stability 50%, SLA adherence 30% and CSAT 50%, translating recurring production issues into backlog improvements.",
       },
     ],
   },
@@ -116,6 +116,7 @@ export const caseStudies: CaseStudy[] = [
       "Ran TAM analysis across 700+ SMEs and 1.2M users to size the opportunity and surface a $2.8M annual savings case.",
       "Wrote the PRD for white-label card infrastructure: enterprise onboarding, card issuance and spend-control workflows.",
       "Specced multi-card and BIN-based programs with MCC, spend-limit and geo controls to meet enterprise compliance and governance.",
+      "Defined RBAC and KYC/KYB approval flows to satisfy PCI-DSS and UAE Central Bank regulatory compliance.",
       "De-risked the build by shipping a functional card-orchestration CMS MVP with AI-native tools before engineering handoff.",
     ],
     outcome:
@@ -134,10 +135,10 @@ export const caseStudies: CaseStudy[] = [
       "Designed growth loops and launched Club Dice end-to-end to 50K consumers.",
       "Defined consumer personas and A/B-tested cohort targeting for an in-app marketing engine.",
       "Built funnel-conversion and CTR dashboards so growth teams could find high-intent segments.",
-      "Shipped an employee-benefits module through a B2B partnership, owning the cross-platform integration.",
+      "Shipped an employee-benefits module through a partnership with Hamara Benefits — a zero-cost employee benefits suite — owning the cross-platform integration.",
     ],
     outcome:
-      "+30% portal engagement, +25% MAU, 8%+ CTR, +50% feature adoption, and a further +40% engagement lift from the benefits partnership.",
+      "+30% portal engagement, +25% MAU, 8%+ CTR, +22% feature adoption, and a further +40% engagement lift from the Hamara Benefits partnership.",
     tags: ["Growth loops", "A/B testing", "Cohort targeting", "Consumer"],
   },
   {
@@ -161,19 +162,19 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "agentic-travel",
     title: "Enterprise travel — reimagined as AI agents",
-    metric: "85% faster visas",
+    metric: "70% faster visas",
     summary:
       "A 0→1 visa-integrated travel platform, then a bet on agentic workflows for near-zero-input booking.",
     problem:
       "Corporate travel was slow and manual across booking, visa, reimbursement and expense — a consumer-grade experience was missing, and every step demanded human input.",
     approach: [
       "Mapped end-to-end travel journeys through stakeholder interviews to find friction across booking, visa and expense.",
-      "Architected a visa-integrated platform with API-first TDB/SBT flows across SSO, payments and real-time status.",
-      "Co-owned the PRD for 6+ AI agents with a dual-change recalibration model for near-zero-input booking.",
+      "Architected a visa-integrated platform via a live Atlys integration, with API-first Travel-Desk (TDB) and Self-Serve-Booking (SBT) flows and role-based approvals (user / approver / travel desk) across SSO, payments and real-time status.",
+      "Co-owned the PRD for 6+ AI agents — spanning calendar inference, policy compliance and inventory ranking — with a dual-change recalibration model for near-zero-input booking.",
       "Built tiered and usage-based pricing models to evaluate GTM and commercialization trade-offs.",
     ],
     outcome:
-      "Visa processing time cut 85%, with an agentic booking experience projected to reduce trip-planning time by 80%.",
+      "Visa processing time cut 70%, with an agentic booking experience projected to reduce trip-planning time by 80%.",
     tags: ["Agentic AI", "API-first", "Pricing", "0→1"],
   },
   {
@@ -581,6 +582,25 @@ export const projects: Project[] = [
     status: "MVP · stakeholder-validated",
     badges: ["0→1", "Corporate cards", "AI-native prototyping"],
   },
+  {
+    slug: "shipfinix-marketplace",
+    name: "ShipFinix — Verified Marketplace Operations",
+    tagline: "0→1 internal operations & trust layer for a high-value asset marketplace.",
+    description:
+      "A product I scoped end-to-end — the admin/operations backbone for a high-value asset marketplace (maritime & certified premium goods): seller onboarding, listing verification, transaction handling, payouts and disputes, with RBAC and maker-checker approvals. I authored the full PRD and built a working prototype.",
+    stack: ["Marketplace ops", "RBAC & maker-checker", "Risk scoring", "PRD", "AI-native prototype"],
+    highlights: [
+      "Authored a ~18-section PRD: lifecycle state machines, a 0–100 weighted risk-scoring engine, SLA/notification matrices, edge cases and a phased MVP→Phase-3 plan.",
+      "Designed maker-checker approval matrices and role-based access across five operational lifecycle stages.",
+      "Built a functional prototype to validate operator workflows before engineering handoff.",
+    ],
+    links: [
+      { label: "Live prototype", url: "https://marketplaceoperation.lovable.app" },
+      { label: "PRD (GitHub)", url: "https://github.com/singhilakshita/verified-marketplace-prd" },
+    ],
+    status: "PRD + working prototype",
+    badges: ["0→1", "Marketplace", "PRD", "Ops & trust"],
+  },
 ];
 
 // ── AI-native product toolkit ─────────────────────────────────────────────
@@ -617,6 +637,6 @@ export interface GrowthItem {
 export const recentGrowth: GrowthItem[] = [
   { date: "2025", title: "Card Orchestration CMS MVP", detail: "Shipped an end-to-end card-issuance CMS MVP (BIN config, spend limits, operator workflows) with Emergent, Lovable & Figma AI for Emirates NBD — de-risking requirements before engineering." },
   { date: "2025", title: "AI-agentic corporate travel", detail: "Co-owned the PRD for 6+ AI agents with a dual-change recalibration model; projected 80% cut in corporate trip-planning time." },
-  { date: "2024–25", title: "Club Dice — 50K consumers", detail: "Launched the Club Dice growth engine end-to-end: +30% engagement, +25% MAU, 8%+ CTR and +50% feature adoption." },
+  { date: "2024–25", title: "Club Dice — 50K consumers", detail: "Launched the Club Dice growth engine end-to-end: +30% engagement, +25% MAU, 8%+ CTR and +22% feature adoption." },
   { date: "2024", title: "YES Pay Leap go-live", detail: "Sole PM across discovery, SOC compliance, client audits and migration; eliminated 90% of manual reconciliation." },
 ];
